@@ -1,0 +1,113 @@
+﻿<Window x:Class="GPIO_TOOL_WIN.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GPIO_TOOL_WIN"
+        mc:Ignorable="d"
+        Icon="Resources\chip_32.ico"
+        Title="GPIO TOOL" Height="380" Width="550" ResizeMode="CanMinimize">
+    <Grid HorizontalAlignment="Left" Width="550">
+        <Grid Height="23" VerticalAlignment="Top" Background="#FFF1F1F1">
+            <Menu x:Name="menu_language" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <MenuItem Height="23">
+                    <MenuItem.Header>
+                        <TextBlock Width="70" TextAlignment="Center" Text="{DynamicResource language}" />
+                    </MenuItem.Header>
+                    <MenuItem x:Name="menu_cn" Header="{DynamicResource cn}" IsCheckable="True" IsChecked="True"  Click="ChangeToCn" />
+                    <Separator Margin="0"/>
+                    <MenuItem x:Name="menu_en" Header="{DynamicResource en}" IsCheckable="True" Click="ChangeToEn" />
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="menu_help" HorizontalAlignment="Left" Margin="84,0,0,0" VerticalAlignment="Top">
+                <MenuItem Height="23">
+                    <MenuItem.Header>
+                        <TextBlock Width="70" TextAlignment="Center"  Text="{DynamicResource help}" />
+                    </MenuItem.Header>
+                    <MenuItem x:Name="menu_help_" Header="{DynamicResource help}" Click="OpenHelp">
+                        <MenuItem.Icon>
+                            <Image Source="Resources/help.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator Margin="0"/>
+                    <MenuItem x:Name="menu_about" Header="{DynamicResource about}" Click="OpenAbout"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+
+        <Image HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" 
+               Source="Resources\it87_gpio.png" Width="500" Height="101"/>
+        
+        <Grid x:Name="GP_title" Height="23" Width="400" Margin="5,167,0,5" VerticalAlignment="Top">
+            <TextBox Name="gp80_t" Text="GP80" HorizontalAlignment="Left" Width="50" Height="23" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1" />
+            <TextBox Name="gp81_t" Text="GP81" HorizontalAlignment="Left" Width="50" Height="23"  Margin="50,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+            <TextBox Name="gp82_t" Text="GP82" HorizontalAlignment="Left" Width="50" Height="23"  Margin="100,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+            <TextBox Name="gp83_t" Text="GP83" HorizontalAlignment="Left" Width="50" Height="23"  Margin="150,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+            <TextBox Name="gp84_t" Text="GP84" HorizontalAlignment="Left" Width="50" Height="23"  Margin="200,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+            <TextBox Name="gp85_t" Text="GP85" HorizontalAlignment="Left" Width="50" Height="23"  Margin="250,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+            <TextBox Name="gp86_t" Text="GP86" HorizontalAlignment="Left" Width="50" Height="23"  Margin="300,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+            <TextBox Name="gp87_t" Text="GP87" HorizontalAlignment="Left" Width="50" Height="23"  Margin="350,0,0,0" IsReadOnly="True"
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF1F1F1"/>
+        </Grid>
+        
+        <Grid x:Name="gpio_mode_grid"  Margin="24,190,0,0" HorizontalAlignment="Center" Width="518" Height="23" VerticalAlignment="Top">
+            <Label Content="{DynamicResource mode}" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="70" Height="23" Margin="-20,0,0,0"/>
+            <TextBox Name="gp80" HorizontalAlignment="Left" Width="50" Height="23" Margin="50,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp81" HorizontalAlignment="Left" Width="50" Height="23" Margin="100,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp82" HorizontalAlignment="Left" Width="50" Height="23" Margin="150,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp83" HorizontalAlignment="Left" Width="50" Height="23" Margin="200,0,0,0"  
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp84" HorizontalAlignment="Left" Width="50" Height="23" Margin="250,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp85" HorizontalAlignment="Left" Width="50" Height="23" Margin="300,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp86" HorizontalAlignment="Left" Width="50" Height="23" Margin="350,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp87" HorizontalAlignment="Left" Width="50" Height="23" Margin="400,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        </Grid>
+        <Grid Name="gpio_value_grid"  Margin="24,213,0,0" HorizontalAlignment="Center" Width="518" Height="23" VerticalAlignment="Top">
+            <Label Content="{DynamicResource val}" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center"  Margin="-20,0,0,0" Width="70" Height="30"/>
+            <TextBox Name="gp80_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="50,0,0,0" 
+                               VerticalAlignment="Top" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center" />
+            <TextBox Name="gp81_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="100,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp82_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="150,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp83_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="200,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp84_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="250,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp85_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="300,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp86_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="350,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            <TextBox Name="gp87_out" HorizontalAlignment="Left" Width="50" Height="23" Margin="400,0,0,0" 
+                             VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        </Grid>
+        <Grid HorizontalAlignment="Center" Margin="74,241,68,34" Width="400"  VerticalAlignment="Center" Height="74">
+            <Label Content="{DynamicResource gp_mode}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="mode_val" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="23" Width="120"
+                             Margin="150,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <Button x:Name="mode_btn" Content="{DynamicResource set_mode}" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Mode_Click"/>
+            <Label Content="{DynamicResource gp_val}" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="out_val" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="23" Width="120"
+                             Margin="150,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <Button x:Name="out_btn" Content="{DynamicResource set_val}" HorizontalAlignment="Left" Margin="300,40,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Out_Click"/>
+        </Grid>
+        <Label x:Name="chip_name" Content="{DynamicResource chip_name}" HorizontalAlignment="Left" Margin="24,316,0,0" VerticalAlignment="Top" Visibility="Hidden" />
+        <Label x:Name="chip_type" Content="" HorizontalAlignment="Left" Margin="85,316,0,0" VerticalAlignment="Top" Visibility="Hidden" />
+        <Label x:Name="error" Content="{DynamicResource error}" HorizontalAlignment="Left" Margin="24,316,0,0" VerticalAlignment="Top" Visibility="Hidden" Foreground="Red" />
+        
+    </Grid>
+</Window>

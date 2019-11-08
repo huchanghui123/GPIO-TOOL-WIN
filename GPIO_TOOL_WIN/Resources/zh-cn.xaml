@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:GPIO_TOOL_WIN"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="language">语言</s:String>
+    <s:String x:Key="cn">中文</s:String>
+    <s:String x:Key="en">英文</s:String>
+    <s:String x:Key="help">帮助</s:String>
+    <s:String x:Key="about">关于</s:String>
+    <s:String x:Key="mode">模式</s:String>
+    <s:String x:Key="val">电压</s:String>
+    <s:String x:Key="gp_mode">GPIO针脚模式(Hex)</s:String>
+    <s:String x:Key="gp_val">GPIO针脚电压(Hex)</s:String>
+    <s:String x:Key="set_mode">设置模式</s:String>
+    <s:String x:Key="set_val">设置电压</s:String>
+    <s:String x:Key="chip_name">芯片型号:</s:String>
+    <s:String x:Key="error">驱动加载失败！请用管理员权限</s:String>
+    
+    <s:String x:Key="app_name">GPIO工具</s:String>
+    <s:String x:Key="app_version">版本号：1.00</s:String>
+    <s:String x:Key="build">开发环境：64-bit Windows 10 Visual Studio 2017</s:String>
+    <s:String x:Key="copyright">© 2019-2020 Qotom 保留所有权利</s:String>
+
+    <s:String x:Key="help_0">使用说明</s:String>
+    <s:String x:Key="help_1">1. 请用管理员权限运行。</s:String>
+    <s:String x:Key="help_2">2. 设置参数需要传入16进制数据。</s:String>
+    <s:String x:Key="help_3">3. 模式设置：0为输入模式；1为输出模式。</s:String>
+    <s:String x:Key="help_4">3. 电压设置：0为低电平；1为高电平。</s:String>
+</ResourceDictionary>

@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:GPIO_TOOL_WIN"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="language">Launguage</s:String>
+    <s:String x:Key="cn">Chinese</s:String>
+    <s:String x:Key="en">English</s:String>
+    <s:String x:Key="help">Help</s:String>
+    <s:String x:Key="about">About</s:String>
+    <s:String x:Key="mode">Mode</s:String>
+    <s:String x:Key="val">Voltage</s:String>
+    <s:String x:Key="gp_mode">GPIO Pin Mode (Hex)</s:String>
+    <s:String x:Key="gp_val">GPIO Pin Value (Hex)</s:String>
+    <s:String x:Key="set_mode">Set Mode</s:String>
+    <s:String x:Key="set_val">Set Voltage</s:String>
+    <s:String x:Key="chip_name">Chip Type:</s:String>
+    <s:String x:Key="error">Driver load failed！Please run with administrator</s:String>
+
+    <s:String x:Key="app_name">GPIO Tool</s:String>
+    <s:String x:Key="app_version">Release: 1.00</s:String>
+    <s:String x:Key="build">Build platform: 64-bit Windows 10 Visual Studio 2017</s:String>
+    <s:String x:Key="copyright">© 2019-2020 Qotom 保留所有权利</s:String>
+
+    <s:String x:Key="help_0">Description</s:String>
+    <s:String x:Key="help_1">1. Please run with administrator privileges.</s:String>
+    <s:String x:Key="help_2">2. Setting parameters requires passing hexadecimal data.</s:String>
+    <s:String x:Key="help_3">2. Setting parameters requires pMode setting: 0 is the input mode; 1 is the output mode.</s:String>
+    <s:String x:Key="help_4">3. Voltage setting: 0 is low level; 1 is high level</s:String>
+</ResourceDictionary>
