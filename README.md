@@ -1,5 +1,5 @@
 # GPIO-TOOL-WIN
-Windows平台修改GPIO的简单测试工具 工控机型号**QOTOM** 350P/600p
+Windows平台修改GPIO的简单测试工具 工控机型号**QOTOM** 3xxP
 
 ### 开发环境
 
