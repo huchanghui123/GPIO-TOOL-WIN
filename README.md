@@ -17,7 +17,7 @@ Visual Studio 2017
 
 ### 软件截图
 
-![gpio_tool](.\gpio_tool.png)
+![gpio_tool](gpio_tool.png)
 
 
 
